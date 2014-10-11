@@ -1,0 +1,58 @@
+
+
+#conteudo{
+
+	height:900px;
+	width:1450px;
+}
+
+#dinamic{
+	
+	margin-left: 12%;
+	margin-top:  2%;
+	height:100%;
+	width:80%;
+}
+
+#ilogo{
+	height:200px;
+	width:1450px;
+}
+#logo{
+
+	position:relative;
+	margin-left:0%;
+	height:200px;
+	width:80%;
+	
+}
+
+#login{
+
+	margin-left:99%;
+	margin-top:0%;
+	position:absolute;
+	width:300px;
+	}
+	
+#busca{
+	margin-left:80%;
+	margin-top:-8%;
+	width:300px;
+	height:150px;
+	position:absolute;
+	
+}
+#ibusca{
+	float:right;
+	margin-top:3%;
+	width:100px;
+	height:100px;
+	position:relative;
+	
+}
+
+
+body{
+	
+}
