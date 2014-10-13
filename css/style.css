@@ -1,4 +1,17 @@
 
+h4{
+	
+	color:orange;
+
+}
+
+#lateral{
+	height:400px;
+	width:400px;
+	margin-left: 75%;
+	position:absolute;
+	margin-top:-40%;
+}
 
 #conteudo{
 
@@ -13,6 +26,18 @@
 	height:100%;
 	width:80%;
 }
+
+#final{
+	margin-top:7%;
+	
+
+}
+#rodape{
+	margin-top:2%;
+	margin-left:35%;
+
+}
+
 
 #ilogo{
 	height:200px;
@@ -50,6 +75,24 @@
 	height:100px;
 	position:relative;
 	
+}
+
+.imglateral{
+	
+	width:100%;
+	height:100%;
+	border:outset;
+	border-width: 2px;
+	border-color:black;
+
+}
+
+.imglateral:hover{
+	
+	width:110%;
+	height:110%;
+
+
 }
 
 
