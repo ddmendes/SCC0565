@@ -1,0 +1,119 @@
+
+
+	<!DOCTYPE html>
+	
+		<html lang = "pt-br">
+		
+			<head>
+				<meta charset="utf-8"/>
+				
+				
+				<link rel="stylesheet" href="../css/style.css">	<!-- Style css para a página -->
+				<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+				<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+			    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+				<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+				<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+				<script src="../js/calendario.js"></script>
+				<script src="../js/cadastro.js"></script>
+				
+			</head>
+		
+			<body>
+			
+				
+				<div id="cadastrologin" >
+			
+					<form name ="form1">
+						
+						<fieldset>
+							<legend> Dados Pessoais </legend>
+							
+								<label for ="nome"> Nome Completo: </label>
+								<input id="nome"  type="text" onkeypress="Up()" placeholder="João da Silva" title="O nome deve conter apenas letras"  required/>
+								
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Data nascimento: <input type="text" id="datepicker" onchange="ValidaData()" placeholder="xx/xx/xxxx" >
+								<br><br>
+								<label for ="cidade"> Cidade: </label>
+								<input id="cidade" type="text" onkeypress="Up()" placeholder="ex: São Carlos"  required/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for ="estado"> Estado: </label>
+								<select id="estado">
+										<option value="AC">AC</option>
+										<option value="AL">AL</option>
+										<option value="AP">AP</option>
+										<option value="AM">AM</option>
+										<option value="BA">BA</option>
+										<option value="CE">CE</option>
+										<option value="DF">DF</option>
+										<option value="ES">ES</option>
+										<option value="GO">GO</option>
+										<option value="MA">MA</option>
+										<option value="MT">MT</option>
+										<option value="MS">MS</option>
+										<option value="MG">MG</option>
+										<option value="PA">PA</option>
+										<option value="PB">PB</option>
+										<option value="PR">PR</option>
+										<option value="PE">PE</option>
+										<option value="PI">PI</option>
+										<option value="RJ">RJ</option>
+										<option value="RN">RN</option>
+										<option value="RS">RS</option>
+										<option value="RO">RO</option>
+										<option value="RR">RR</option>
+										<option value="SC">SC</option>
+										<option value="SP">SP</option>
+										<option value="SE">SE</option>
+										<option value="TO">TO</option>
+	
+							  </select>
+							<br><br>
+							
+							<label for="telefone">Telefone:</label>
+							<input id="telefone" maxlength="14" placeholder="(xx) xxxx-xxxx" onkeypress="mascara(this)">
+							</fieldset>
+							
+							<br><br>
+				
+							<fieldset>
+								<legend> Dados da Conta </legend>
+							 <label for="email">Email: </label>
+							 <input id="email" type="email" required>
+							
+							<br><br>
+							
+								<label for ="senha"> Senha: </label>
+								<input id="senha" type="password" onkeyup="Valida()" required/>
+							
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for ="csenha">Confime a Senha: </label>
+								<input id="csenha" type="password" onkeyup="Lcadstro()" required/>
+								<br>
+							
+							<label class = "labelmessage"id="resp"  required style="display:none;"> Senhas incorretas! </label>
+							
+						</fieldset>
+					
+						<br><br>
+						
+						<button id="btn_cad_login"disabled  onclick="Finaliza()" > Cadastrar  </button>
+
+					</form>
+					
+				
+
+			
+				</div>
+			
+			
+			</body>
+			
+		
+		
+		
+		
+		
+		</html>
+		
