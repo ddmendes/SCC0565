@@ -158,9 +158,24 @@ function tem_maiusculas(texto){
 	
 	
 	function Finaliza(){
-	
-
-	  alert("Usuário Cadastrado com sucesso!!");
-
-
+		if($('form').checkValidity()) {
+			$.ajax({
+				url : "../control/CadastroControl.py",
+				type : "post",
+				datatype : "json",
+				data : {
+					name : $("input[name='nome']").val(),
+					birthdate : $("input[name='nascimento']").val(),
+					city : $("input[name='cidade']").val(),
+					state : $("input[name='estado']").val(),
+					phone : $("input[name='phone']").val(),
+					email : $("input[name='email']").val(),
+					password : $("input[name='senha']").val()
+				},
+				success: function(response) {
+					alert("Cadastro realizado com sucesso");
+					header.location("recentes.html");
+				}
+			});
+		}
 	}

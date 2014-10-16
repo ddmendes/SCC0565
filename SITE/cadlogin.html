@@ -24,22 +24,22 @@
 				
 				<div id="cadastrologin" >
 			
-					<form name ="form1">
+					<form name ="form1" action>
 						
 						<fieldset>
 							<legend> Dados Pessoais </legend>
 							
 								<label for ="nome"> Nome Completo: </label>
-								<input id="nome"  type="text" onkeypress="Up()" placeholder="João da Silva" title="O nome deve conter apenas letras"  required/>
+								<input name="nome"  type="text" onkeypress="Up()" placeholder="João da Silva" title="O nome deve conter apenas letras"  required/>
 								
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								Data nascimento: <input type="text" id="datepicker" onchange="ValidaData()" placeholder="xx/xx/xxxx" >
+								Data nascimento: <input name="nascimento" type="text" name="datepicker" onchange="ValidaData()" placeholder="xx/xx/xxxx" >
 								<br><br>
 								<label for ="cidade"> Cidade: </label>
-								<input id="cidade" type="text" onkeypress="Up()" placeholder="ex: São Carlos"  required/>
+								<input name="cidade" type="text" onkeypress="Up()" placeholder="ex: São Carlos"  required/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<label for ="estado"> Estado: </label>
-								<select id="estado">
+								<select name="estado">
 										<option value="AC">AC</option>
 										<option value="AL">AL</option>
 										<option value="AP">AP</option>
@@ -72,7 +72,7 @@
 							<br><br>
 							
 							<label for="telefone">Telefone:</label>
-							<input id="telefone" maxlength="14" placeholder="(xx) xxxx-xxxx" onkeypress="mascara(this)">
+							<input name="telefone" maxlength="14" placeholder="(xx) xxxx-xxxx" onkeypress="mascara(this)">
 							</fieldset>
 							
 							<br><br>
@@ -80,16 +80,16 @@
 							<fieldset>
 								<legend> Dados da Conta </legend>
 							 <label for="email">Email: </label>
-							 <input id="email" type="email" required>
+							 <input name="email" type="email" required>
 							
 							<br><br>
 							
 								<label for ="senha"> Senha: </label>
-								<input id="senha" type="password" onkeyup="Valida()" required/>
+								<input name="senha" type="password" onkeyup="Valida()" required/>
 							
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<label for ="csenha">Confime a Senha: </label>
-								<input id="csenha" type="password" onkeyup="Lcadstro()" required/>
+								<input name="csenha" type="password" onkeyup="Lcadstro()" required/>
 								<br>
 							
 							<label class = "labelmessage"id="resp"  required style="display:none;"> Senhas incorretas! </label>
@@ -98,7 +98,7 @@
 					
 						<br><br>
 						
-						<button id="btn_cad_login"disabled  onclick="Finaliza()" > Cadastrar  </button>
+						<button id="btn_cad_login" onclick="Finaliza()" > Cadastrar  </button>
 
 					</form>
 					
