@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<u:users xmlns:u="http://www.example.com/users" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="users users.xsd">
+	<u:user login="kdparnell@fake.com">
+		<u:name>KIMBERLY D. PARNELL</u:name>
+		<u:birthdate>1944-03-08</u:birthdate>
+		<u:city>UBERLÂNDIA</u:city>
+		<u:state>MG</u:state>
+		<u:phone>(34)5560-8422</u:phone>
+		<u:password>1234@kdP</u:password>
+	</u:user>
+	<u:user login="rkp@jujuba.com">
+		<u:name>ROBERT K. PATEL</u:name>
+		<u:birthdate>1980-10-25</u:birthdate>
+		<u:city>JUIZ DE FORA</u:city>
+		<u:state>MG</u:state>
+		<u:phone>(32)9378-7123</u:phone>
+		<u:password>rkpRKP1!</u:password>
+	</u:user>
+	<u:user login="lrb@rj.gov.br">
+		<u:name>LEOLA R. BEGAY</u:name>
+		<u:birthdate>1968-03-10</u:birthdate>
+		<u:city>BARRA MANSA</u:city>
+		<u:state>RJ</u:state>
+		<u:phone>(24)8857-7083</u:phone>
+		<u:password>lrB@1968</u:password>
+	</u:user>
+</u:users>

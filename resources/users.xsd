@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.example.com/users" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:u="http://www.example.com/users" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:complexType name="UserType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="birthdate" type="xs:date" />
+			<xs:element name="city" type="xs:string" />
+			<xs:element name="state" type="xs:string" />
+			<xs:element name="phone" type="xs:string" />
+			<xs:element name="password" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="login" type="xs:string" />
+	</xs:complexType>
+
+	
+
+	<xs:element name="users">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user" type="u:UserType" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

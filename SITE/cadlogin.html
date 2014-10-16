@@ -30,13 +30,14 @@
 							<legend> Dados Pessoais </legend>
 							
 								<label for ="nome"> Nome Completo: </label>
-								<input name="nome"  type="text" onkeypress="Up()" placeholder="João da Silva" title="O nome deve conter apenas letras"  required/>
+								<input name="nome"  type="text" class="uppercase" placeholder="João da Silva" title="O nome deve conter apenas letras"  required/>
 								
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								Data nascimento: <input name="nascimento" type="text" name="datepicker" onchange="ValidaData()" placeholder="xx/xx/xxxx" >
+								<label for="nascimento">Data nascimento:</label>
+								<input name="nascimento" type="date" id="datepicker" onchange="ValidaData()" placeholder="xx/xx/xxxx" >
 								<br><br>
 								<label for ="cidade"> Cidade: </label>
-								<input name="cidade" type="text" onkeypress="Up()" placeholder="ex: São Carlos"  required/>
+								<input name="cidade" type="text" class="uppercase" placeholder="ex: São Carlos"  required/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<label for ="estado"> Estado: </label>
 								<select name="estado">
@@ -85,11 +86,11 @@
 							<br><br>
 							
 								<label for ="senha"> Senha: </label>
-								<input name="senha" type="password" onkeyup="Valida()" required/>
+								<input name="senha" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}$" title="Senha deve possuir pelo menos 1 letra minúscula, 1 letra maiúscula, 1 número e 1 caracter especial e ter pelo menos 8 caracteres." onkeyup="Lcadstro()" required/>
 							
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<label for ="csenha">Confime a Senha: </label>
-								<input name="csenha" type="password" onkeyup="Lcadstro()" required/>
+								<input name="csenha" type="password" onkeyup="Lcadstro()" required />
 								<br>
 							
 							<label class = "labelmessage"id="resp"  required style="display:none;"> Senhas incorretas! </label>
@@ -98,7 +99,7 @@
 					
 						<br><br>
 						
-						<button id="btn_cad_login" onclick="Finaliza()" > Cadastrar  </button>
+						<button id="btn_cad_login" onclick="Finaliza();" > Cadastrar  </button>
 
 					</form>
 					
