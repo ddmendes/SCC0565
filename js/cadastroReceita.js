@@ -30,14 +30,16 @@ function Valida(form){
 
       texto=form.nome.value;
       aux=tem_numeros(texto);
+      erro=0;
 
        if(aux>0){
+        erro=1;
          alert("Digite apenas letras no campo autor!");
                 form.nome.focus();
        } 
 
        aux=0;
-       erro=0;
+       
        texto=form.receita.value;
        aux=tem_numeros(texto);
 
@@ -47,6 +49,10 @@ function Valida(form){
                 form.receita.focus();
        } 
 
+       if(form.categoria.value=="selecione"){
+          erro=1;
+          alert("Selecione uma categoria!")
+       }
        aux=0;
        texto = form.tempo.value;
        aux = tem_letras(texto);
@@ -77,7 +83,12 @@ function Valida(form){
                 form.valornutri.focus();
        } 
 
-       if(erro<1)
+       if(form.metodo.value=="selecione"){
+          erro=1;
+          alert("Selecione o método de cozimento!")
+       }
+
+       if(erro==0)
         {
           alert("Receita cadastrada com sucesso!");
         }
