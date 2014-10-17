@@ -88,7 +88,7 @@
 							    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 								<label for ="receita1"> Nome da Receita: </label>
-								<input id="receita"  type="text" onkeypress="Up()" placeholder="Pudim" title="O nome da receita deve conter apenas letras" maxlength="50"  required/>
+								<input id="receita"  type="text"  placeholder="Pudim" title="O nome da receita deve conter apenas letras" maxlength="50"  required/>
 								<br><br>
 
 								<label for ="descricao1"> Descrição: </label><br>		
@@ -96,13 +96,14 @@
 								<br><br>
 
 								<label for="files">Imagem:</label>
-								<input type="file" id="files" name="files[]" multiple />
+								<input type="file" id="files" name="files[]" multiple required/>
 								<output id="list"></output>
 
 								<br><br>
 
 								<label for="categoria">Categoria:</label>
 								<select id="categoria">
+										<option value="selecione">Selecione</option>
 										<option value="massasris">Massas e Risotos</option>
 										<option value="acomp">Acompanhamento</option>
 										<option value="entradas">Entradas</option>
@@ -114,11 +115,11 @@
 								<br><br>
 
 								<div id="ingredientes"></div>
-								<button type="button" class="btn btn-primary" onclick="add();">Adicionar Ingrediente</button>
+								<button type="button" class="btn btn-primary" onclick="add();" required>Adicionar Ingrediente</button>
 								<br><br>
 
 								<label for="tempoPreparo">Tempo de Preparo:</label>
-								<input id="tempo"  type="text" onkeypress="Up()" placeholder="50 minutos" title="O tempo deve estar em minutos" maxlength="50"  required/>
+								<input id="tempo"  type="text" placeholder="50 minutos" title="O tempo deve estar em minutos" maxlength="50"  required/>
 								<br><br>
 
 								<label for="instrucoes">Instruções de Preparo:</label><br>
@@ -126,16 +127,17 @@
 								<br><br>
 
 								<label for="porcoes">Porções:</label>
-								<input id="porcoes"  type="text" onkeypress="Up()" placeholder="10 pessoas" title="Número de pessoas que a receita serve" maxlength="50"  required/>
+								<input id="porcoes"  type="text"  placeholder="10 pessoas" title="Número de pessoas que a receita serve" maxlength="50"  required/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 								<label for="valorNutri">Valor Nutricional:</label>
-								<input id="valornutri"  type="text" onkeypress="Up()" placeholder="250 calorias" title="Número de calorias da receita" maxlength="50"  required/>
+								<input id="valornutri"  type="text"  placeholder="250 calorias" title="Número de calorias da receita" maxlength="50"  required/>
 								<br><br>
 
 								<label for="metodoCoz">Método de Cozimento:</label>
 								<select id="metodo">
+										<option value="selecione">Selecione</option>
 										<option value="frito">Frito</option>
 										<option value="cozido">Cozido</option>
 										<option value="assado">Assado</option>
@@ -147,7 +149,7 @@
 					
 						<br><br>
 						
-						<button id="btn_cad_login" type='submit' > Cadastrar  </button>
+						<button id="btn_cad_receita" type='submit' > Cadastrar  </button>
 
 					</form>
 					

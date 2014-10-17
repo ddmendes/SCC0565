@@ -5,7 +5,6 @@ function tem_letras(texto){
    texto = texto.toLowerCase();
    for(i=0; i<texto.length; i++){
       if (letras.indexOf(texto.charAt(i),0)!=-1){
-        alert("só texto");
          return 1;
       }
    }
@@ -17,6 +16,7 @@ function tem_numeros(texto){
        for(i=0; i<texto.length; i++){
         if (numeros.indexOf(texto.charAt(i),0)!=-1){
          return 1;
+         alert("só letras");
         }
        }
    return 0;
@@ -25,67 +25,61 @@ function tem_numeros(texto){
 
 
 function Valida(form){
-  var aux=0;
-  for(i=0; i<form.nome.value.length; i++){
-        if (numeros.indexOf(form.nome.value.charAt(i),0)!=-1){
-                aux=1;
-        }
-       }
+
+      var aux=0;
+
+      texto=form.nome.value;
+      aux=tem_numeros(texto);
 
        if(aux>0){
          alert("Digite apenas letras no campo autor!");
                 form.nome.focus();
-       }
+       } 
 
        aux=0;
-        for(i=0; i<form.receita.value.length; i++){
-        if (numeros.indexOf(form.receita.value.charAt(i),0)!=-1){
-                aux=1;
+       erro=0;
+       texto=form.receita.value;
+       aux=tem_numeros(texto);
 
-        }
-       }
         if(aux>0){
+          erro=1;
          alert("Digite apenas letras no campo receita!");
                 form.receita.focus();
-       }
+       } 
 
        aux=0;
+       texto = form.tempo.value;
+       aux = tem_letras(texto);
 
-        for(i=0; i<form.tempo.length; i++){
-        if (numeros.indexOf(form.porcoes.charAt(i),0)!=-1){
-              
-        } else aux=1;
-       }
         if(aux>0){
+          erro=1;
          alert("Digite apenas números no campo tempo de preparo!");
                 form.tempo.focus();
-       }
+       } 
 
        aux=0;
+       texto = form.porcoes.value;
+       aux = tem_letras(texto);
 
-       for(i=0; i<form.porcoes.length; i++){
-        if (numeros.indexOf(form.porcoes.charAt(i),0)!=-1){
-              aux=1;
-        }
-       }
         if(aux>0){
+          erro=1;
          alert("Digite apenas números no campo porções!");
                 form.porcoes.focus();
-       }
+       } 
 
        aux=0;
+       texto = form.valornutri.value;
+       aux = tem_letras(texto);
 
-       for(i=0; i<form.valornutri.length; i++){
-        if (numeros.indexOf(form.valornutri.charAt(i),0)!=-1){
-              aux=1;
-        }
-       }
-        if(aux>0){
+       if(aux>0){
+        erro=1;
          alert("Digite apenas números no campo valor nutricional!");
                 form.valornutri.focus();
-       }
+       } 
 
-       aux=0;
+       if(erro<1)
+        {
+          alert("Receita cadastrada com sucesso!");
+        }
 
-  alert("validou");
 }
