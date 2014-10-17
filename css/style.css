@@ -106,6 +106,24 @@ input.uppercase {
 	text-transform: uppercase;
 }
 
+ul.recipe-preview {
+	list-style: none;
+}
+
+li.recipe-name {
+	font-size: 18pt;
+	font-weight: bold;
+	position: relative;
+	top: -170px;
+	left: 290px;
+}
+
+li.recipe-rate {
+	position: relative;
+	top: -150px;
+	left: 290px;
+}
+
 body{
 	
 }
