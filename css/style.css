@@ -1,4 +1,6 @@
-
+h1 {
+	padding-left: 40px;
+}
 h4{
 	
 	color:orange;
@@ -120,7 +122,25 @@ li.recipe-name {
 
 li.recipe-rate {
 	position: relative;
+	top: -140px;
+	left: 290px;
+}
+
+li.recipe-autor {
+	position: relative;
+	top: -190px;
+	left: 290px;
+}
+
+li.recipe-desc {
+	position: relative;
 	top: -150px;
+	left: 290px;
+}
+
+li.recipe-rinfo {
+	position: relative;
+	top: -190px;
 	left: 290px;
 }
 
