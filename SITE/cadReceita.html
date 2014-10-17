@@ -16,6 +16,24 @@
 
 				<script src="../js/cadastroReceita.js"></script>
 				<script>
+					
+				 count = 1;
+				function add (){
+                var ingredientes = document.getElementById("ingredientes");
+                ingredientes.innerHTML += "<div id='ingrediente_"+count+"'>"+
+                        "<input class='i_input' name='i_nome_"+(count)+"' placeholder='Nome da Receita' type='text' required/>"+
+                        "<input class='i_input' name='i_qtd_"+(count)+"' placeholder='Quantidade' type='number' required/>"+
+                        "<input class='i_input' name='i_unidade_"+(count)+"' placeholder='Unidade de Medida' type='text' required/>"+
+                        "<button type='button' class='btn btn-sm btn-danger' onclick='removerIngrediente("+count+");'>-</button><br/>"+
+                        "</div>";
+                count++;
+                
+                var qtd = document.getElementById("qtd_ingredientes");
+                qtd.value = count;
+            
+					}
+
+					
 				  function handleFileSelect(evt) {
 				    var files = evt.target.files; // FileList object
 
@@ -30,7 +48,10 @@
 				  }
 
 				  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
 				</script>
+
+
 				<style type="text/css">
 
 					#draghere{
@@ -57,20 +78,20 @@
 				
 				<div>
 			
-					<form name ="form1">
+					<form name ="form"  onsubmit="return Valida(form)" >
 						
 						<fieldset>
 							<legend>Cadastro de Receita </legend>
 							
-								<label for ="nome"> Autor: </label>
-								<input id="nome"  type="text" onkeypress="temNumeros()" placeholder="João da Silva" title="O autor deve estar cadastrado no site"  required/>
+								<label for ="nome1"> Autor: </label>
+								<input id="nome"  type="text"  placeholder="João da Silva" title="O autor deve estar cadastrado no site"  required/>
 							    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-								<label for ="receita"> Nome da Receita: </label>
+								<label for ="receita1"> Nome da Receita: </label>
 								<input id="receita"  type="text" onkeypress="Up()" placeholder="Pudim" title="O nome da receita deve conter apenas letras" maxlength="50"  required/>
 								<br><br>
 
-								<label for ="descricao"> Descrição: </label><br>		
+								<label for ="descricao1"> Descrição: </label><br>		
 								<textarea id="descricao" rows="5" cols="50" maxlength="300" placeholder="Escreva aqui a descrição" required></textarea>		
 								<br><br>
 
@@ -92,7 +113,8 @@
 							   </select>
 								<br><br>
 
-								<label for="ingredientes">Ingredientes:</label>
+								<div id="ingredientes"></div>
+								<button type="button" class="btn btn-primary" onclick="add();">Adicionar Ingrediente</button>
 								<br><br>
 
 								<label for="tempoPreparo">Tempo de Preparo:</label>
@@ -125,7 +147,7 @@
 					
 						<br><br>
 						
-						<button id="btn_cad_login" type='submit' onclick="Finaliza()" > Cadastrar  </button>
+						<button id="btn_cad_login" type='submit' > Cadastrar  </button>
 
 					</form>
 					
