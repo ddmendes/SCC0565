@@ -17,9 +17,9 @@ function exportXML() {
 			).append(
 				$('<author />').text($('span[itemprop="author"]').text())
 			).append(
-				$('<yield />').text($('span[itemprop="recipeYeld"]').text())
+				$('<yield />').text($('span[itemprop="recipeYield"]').text())
 			).append(
-				$('<preptime />').text($('span[itemprop="prepTime"]').text())
+				$('<preptime />').text($('span[name="preptime"]').text())
 			)
 		).append(
 			$('<ingredientlist />')
@@ -27,6 +27,18 @@ function exportXML() {
 			$('<preparation />').text($('span[itemprop="recipeInstructions"]').text())
 		)
 	);
+
+	$('span[itemprop="ingredients"]').each(function() {
+		$root.find('ingredientlist').append(
+			$('<ingredient />').append(
+				$('<quantity />').text($(this).children('span[name="quantity"]').text())
+			).append(
+				$('<unit />').text($(this).children('span[name="unit"]').text())
+			).append(
+				$('<fooditem />').text($(this).children('span[name="fooditem"]').text())
+			)
+		)
+	});
 
 	var xmlString = (new XMLSerializer()).serializeToString($root[0]);
 
