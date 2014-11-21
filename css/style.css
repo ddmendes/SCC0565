@@ -9,16 +9,17 @@ h4{
 
 .imageR{
 
- width:"300x";
- height:"150px";
- margin-top: -3%;
- position:absolute;
- margin-left:50%;
+ width:350px;
+ height:200px;
+ margin-top: -1%;
+ position:relative;
+ margin-left:30%;
+
  
 }
 
 .Receita{
-
+	margin-top:2%;
 	position:absolute;
 	margin-left:50px;
 
