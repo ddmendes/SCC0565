@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+
+	<html lang = "pt-br">
+		
+			<head>
+				<meta name="description" content="Arroz de forno">
+				<meta charset="utf-8"/>
+				<link rel="stylesheet" href="../../css/menu.css">	<!-- Style css para o menu -->
+				<link rel="stylesheet" href="../../css/style.css">	<!-- Style css para a página -->
+				<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+				
+				
+			</head>
+		
+
+	<body>
+	
+			<div class="Receita">	
+					<div itemscope itemtype="http://schema.org/Recipe">
+					<span itemprop="name"><strong>Arroz Carreteiro</strong></span><br>
+					<strong>Autor:</strong> <span itemprop="author">Silvia Martins</span><br><br>
+			
+				 <img itemprop="image" class="imageR" src="../img/carreteiro.jpg" /><br><br>
+				 <strong> Tempo de Preparação:</strong> <meta itemprop="prepTime" content="PT15M">1 hora<br>
+				  
+				 <strong> Rendimento:</strong> <span itemprop="recipeYield">10 porções</span><br>
+				  <div itemprop="nutrition"
+					itemscope itemtype="http://schema.org/NutritionInformation">
+				&nbsp;&nbsp;<strong>Informação Nutricional:</strong><br>
+					<span itemprop="calories">350 kcal</span>,<br>
+					<span itemprop="fatContent">40 g</span><br><br>
+				  </div>
+				&nbsp;&nbsp;<strong>Ingredientes:</strong><br><br>
+				  - <span itemprop="ingredients">1 kg de carne seca</span><br>
+				  - <span itemprop="ingredients">1 cebola picada</span><br>
+				  - <span itemprop="ingredients">1 colher de sopa de cheiro-verde</span><br>
+				  - <span itemprop="ingredients">2 xícaras de chá de arroz </span><br>
+				  - <span itemprop="ingredients">2 dentes de alho picados</span><br>
+				  - <span itemprop="ingredients">6 colheres de sopa de azeite</span><br>
+		
+				<br><br>
+				&nbsp; <strong>Modo de Preparo:</strong><br>
+				  <span itemprop="recipeInstructions">
+				 Deixe a carne seca de molho de vépera, troque a água e cozinhe até ficar macia<br>
+				Desfie<br>
+				Frite-a em uma panela com azeite<br>
+				Quando a carne estiver dourada, coloque a cebola e o alho<br>
+				Junte o arroz e frite<br>
+				Acrescente a água fervente e cozinhe em fogo baixo até o arroz ficar macio<br>
+				Salpique o cheiro-verde e sirva em seguida<br>
+				Bom apetite<br>
+
+				  </span>
+				  <br><br>
+				  88 pessoas avaliaram essa receita
+				  <meta itemprop="interactionCount" content="UserComments:71" />
+				  
+  ...
+</div>
+				
+		</div>		
+				
+				
+				
+	</body>
+</html>
